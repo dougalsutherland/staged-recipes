@@ -22,12 +22,16 @@ requirements:
     - setuptools
   run:
     - python
-    - obspy 1.*
+    - obspy 1.*,>=1.0.3
     - numpy
     - scipy
     - matplotlib
     - pyproj
     - gdal 2.*
+  entry_points:
+    - pySW4-plot-image = pySW4.cli.plot_image:main
+    - pySW4-create-plots = pySW4.cli.create_all_plots:main
+    - png2mp4 = pySW4.cli.png2mp4:main
 
 test:
   imports:
@@ -45,7 +49,10 @@ about:
   summary: 'Setup, run, post process, and visualize numerical simulations. Primarily SW4'
 
   description: |
-    pySW4 is an open-source project dedicated to provide a Python framework for working with numerical simulations of seismic-wave propagation with SW4 in all phases of the task (preprocessing, post-processing and runtime visualization).
+    pySW4 is an open-source project dedicated to provide a Python framework
+    for working with numerical simulations of seismic-wave propagation with
+    SW4 in all phases of the task (preprocessing, post-processing and runtime
+    visualization).
   doc_url: http://shaharkadmiel.github.io/pySW4/
   dev_url: https://github.com/shaharkadmiel/pySW4/
 
